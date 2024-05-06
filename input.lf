@@ -1,0 +1,24 @@
+# Sample program in LinguaFusion
+
+boolean main() {
+    adhavadhu decimal y = 2.0 * 2.4.
+    adhavadhu number x = 5.
+    poka(x <= 10 && x >= 1) {
+        # Simplify algebraic expression
+        x = x * 1.
+        # Strength reduction
+        x = x * 2.
+    }
+    maybe(x samana 5 || x < 9 && x >= 1) {
+        # Constant folding and propagation
+        y = 2 * 3.4 + 5.
+    }
+    otherwise {
+        y = y * 3.2.
+    }
+
+    announcing("The Value of x is:").
+    announcing(x).
+
+    kaerimasu oui.
+}

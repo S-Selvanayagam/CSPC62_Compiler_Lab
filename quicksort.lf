@@ -1,0 +1,42 @@
+number partition(number argarr, number low, number high) {
+    adhavadhu number pivot = 0.
+    pivot = argarr[low].
+    adhavadhu number k = high.
+    adhavadhu number curr = high.
+    poka (curr > low) {
+        maybe (argarr[curr] > pivot) {
+            adhavadhu number temp = 0.
+            temp = argarr[curr].
+            argarr[curr] = argarr[k].
+            argarr[k] = temp.
+            k = k - 1.
+        }
+        curr = curr - 1.
+    }
+    adhavadhu number newtemp = 0.
+    newtemp = argarr[low].
+    argarr[low] = argarr[k].
+    argarr[k] = newtemp.
+    kaerimasu k.
+}
+
+boolean quickSort(number sortarr, number low, number high) {
+    maybe (low < high) {
+        adhavadhu number idx = 0.
+        idx = partition(sortarr, low, high).
+        quickSort(sortarr, low, idx - 1).
+        quickSort(sortarr, idx + 1, high).
+    }
+}
+
+boolean main() {
+    adhavadhu number arr[10].
+    adhavadhu number n = 0.
+    batao("Enter the number of elements", &n).
+    adhavadhu number counter = 0.
+    poka (counter < n) {
+        batao("Enter value", &arr[counter]).
+        counter = counter + 1.
+    }
+    quickSort(arr, 0, n - 1).
+}
